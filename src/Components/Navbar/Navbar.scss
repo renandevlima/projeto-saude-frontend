@@ -1,0 +1,106 @@
+@import "../../Styles/main.scss";
+
+nav{
+    height: 100vh;
+    width: 300px;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0 0;
+
+    h3{
+        color: $white;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        padding: 20px 50px;
+
+        .icone{
+            margin-right: 15px;
+            font-size: 30px;
+        }
+    }
+
+    .navigation{
+        list-style: none;
+        flex: 1;
+
+        .nav-item{
+            background-color: $color-primary;
+            border: 1px solid $white;
+            border-left: 0;
+            border-right: 0;
+
+            .nav-link{
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                padding: 20px 50px;
+
+                .icone{
+                    margin-right: 15px;
+                }
+            }
+
+            .active{
+                background-color: $color-secondary;
+                font-weight: bold;
+            }
+        }
+
+        .nav-item:hover{
+            background-color: $color-secondary;
+            cursor: pointer;
+        }
+    }
+
+    .logout{
+        padding: 20px 50px;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #A30000;
+        border: 0;
+        color: $white;
+
+        .icone{
+            font-size: 18px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.toogle-menu{
+    display: none;
+}
+
+@media(max-width: $breakpoint-mobile){
+    nav{
+        display: none;
+        position: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+    nav.active{
+        display: flex;
+    }
+
+    .toogle-menu{
+        z-index: 4;
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 0;
+        right: 20px;
+        top: 40px;
+        background-color: #A30000;
+        color: $white;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+}
