@@ -1,0 +1,85 @@
+@import "../../Styles/main.scss";
+
+.transations {
+    padding: 0 50px 50px;
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+
+        .descricao {
+            width: 60%;
+        }
+
+        td {
+            border-top: 1px solid #7a7a7a;
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        th {
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 0;
+            color: $color-primary;
+        }
+
+        .mais {
+            color: $color-green;
+        }
+
+        .menos {
+            color: $color-red;
+        }
+
+        .ver{
+            background-color: $color-secondary;
+            border-radius: 3px;
+            height: 26px;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            width: 26px;
+        }
+    }
+
+    .paginacao{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 20px;
+
+        .pagina{
+            border: none;
+            width: 30px;
+            height: 30px;
+            background-color: #7a7a7a;
+            color: $white;
+        }
+
+        .ativo{
+            background-color: $color-primary;
+        }
+    }
+}
+
+@media(max-width: $breakpoint-mobile){
+    .transations {
+        padding: 20px;
+        width: 100%;
+        .tabela-campo{
+            width: 100%;
+            overflow-x: scroll;
+            table{
+                width: 1024px;
+            }
+        }
+    }
+}

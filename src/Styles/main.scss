@@ -2,6 +2,8 @@
 
 $color-primary: #373F51;
 $color-secondary: #58A4B0;
+$color-red: #A30000;
+$color-green: #66bb6a;
 $black: #1B1B1E;
 $white: #FFF;
 
@@ -17,4 +19,12 @@ $breakpoint-mobile: 996px;
 
 main{
     height: 100vh;
+    display: flex;
+}
+
+.content{
+    flex: 1;
+    display: block;
+    max-height: 100vh;
+    overflow-y: auto;
 }

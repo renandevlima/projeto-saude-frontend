@@ -1,8 +1,12 @@
 import React from "react";
+import LoginField from "../../Components/LoginField/LoginField";
+import "./Login.scss";
 
 function Login(){
     return(
-        <h1>Login</h1>
+        <main className="login">
+            <LoginField/>
+        </main>
     );
 }
 

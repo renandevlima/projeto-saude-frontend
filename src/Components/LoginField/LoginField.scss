@@ -1,0 +1,32 @@
+@import "../../Styles/main.scss";
+
+.login-field {
+    background-color: $white;
+    padding: 50px;
+    border-radius: 10px;
+    width: 350px;
+
+    h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .toogle-form {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 5px;
+        background-color: $color-primary;
+        color: $white;
+        border: 3px solid $color-primary;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

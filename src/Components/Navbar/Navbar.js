@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faUsers, faMoneyBillAlt, faSignOutAlt, faHome, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faMoneyBillAlt, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import "./Navbar.scss";
 
@@ -18,14 +18,8 @@ function Navbar() {
             <ul className="navigation">
                 <li className="nav-item">
                     <a href="#" className="nav-link active">
-                        <FontAwesomeIcon icon={faHome} className="icone" />
-                        Home
-                    </a>
-                </li>
-                <li className="nav-item">
-                    <a href="#" className="nav-link">
                         <FontAwesomeIcon icon={faMoneyBillAlt} className="icone" />
-                        Transacoes
+                        Transações
                     </a>
                 </li>
             </ul>

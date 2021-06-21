@@ -1,0 +1,185 @@
+@import "../../Styles/main.scss";
+
+.switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 60px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background-color: $color-red;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: $color-green;
+}
+
+input:checked + .slider:before {
+    transform: translateX(36px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.add-transation{
+    padding: 50px;
+
+    h2{
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .sup{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .campo{
+            display: flex;
+            align-items: center;
+
+            p{
+                font-size: 18px;
+                font-weight: 600;
+
+                .icone{
+                    font-size: 24px;
+                    margin-right: 5px;
+                }
+            }
+
+            p.pagar{
+                color: $color-red;
+            }
+
+            p.receber{
+                color: $color-green;
+            }
+
+            .switch{
+                margin: 0 10px;
+            }
+        }
+
+        .campo-texto{
+            display: flex;
+            flex: 1;
+            margin-left: 20px;
+
+            .campo-icone{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 36px;
+                height: 36px;
+                border: 1px solid #7a7a7a;
+                border-right: none;
+                border-radius: 3px 0 0 3px;
+
+                .icone{
+                    color: $color-primary;
+                }
+            }
+
+            .input-form{
+                flex: 1;
+                height: 36px;
+                border: 1px solid #7a7a7a;
+                border-left: none;
+                text-align: end;
+                padding-right: 10px;
+                border-radius: 0 3px 3px 0;
+            }
+        }
+    }
+
+    .sub{
+        display: flex;
+        margin-top: 20px;
+
+        .input-form{
+            flex: 1;
+            margin-right: 20px;
+            resize: none;
+            padding: 3px;
+            border-radius: 3px;
+            border: 1px solid #7a7a7a;
+        }
+
+        .nova{
+            background-color: $color-primary;
+            border: 1px solid #7a7a7a;
+            color: $white;
+            border-radius: 3px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width: $breakpoint-mobile){
+    .add-transation{
+        padding: 20px;
+
+        .sup,
+        .sub{
+            flex-direction: column;
+        }
+
+        .campo-texto,
+        .input-form{
+            margin: 0;
+            width: 100%;
+        }
+
+        .sup{
+            .campo{
+                width: 100%;
+            }
+            .campo-texto{
+                margin: 0;
+                margin-top: 10px;
+            }
+        }
+
+        .sub{
+            margin-top: 10px;
+            .input-form{
+                margin: 0;
+                min-height: 100px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
